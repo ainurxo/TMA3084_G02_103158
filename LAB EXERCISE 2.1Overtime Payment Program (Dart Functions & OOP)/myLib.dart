@@ -1,9 +1,9 @@
 class Employee {
-  String name;
-  double basicSalary;
-  double overtimePay;
-  double overtimeHours;
+  late String jobTitle;
+  late String location;
+  late double salary;
+  late double overtimeHr;
 
   // Constructor
-  Employee(this.name, this.basicSalary, this.overtimePay, this.overtimeHours);
+  Employee(this.jobTitle, this.location, this.salary, this.overtimeHr);
 }

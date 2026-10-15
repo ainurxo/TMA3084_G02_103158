@@ -1,16 +1,16 @@
-import 'myLib.dart';
-
-double calculateOvertimePay(Employee emp) {
-  return emp.overtimeHours * emp.overtimePay;
-}
-
-double calculateTotalSalary(Employee emp) {
-  return emp.basicSalary + calculateOvertimePay(emp);
-}
+import 'myLib.dart' as emp;
 
 void main() {
-  Employee emp1 = Employee('Ainur', 50000.0, 10.0, 7.0);
+  double extraPayPerHr;
 
-  double totalSalary = calculateTotalSalary(emp1);
-  print("Total Salary = \$$totalSalary USD");
+  var Ainur = emp.Employee('QA', 'New York', 5000, 7);
+
+  if (Ainur.salary >= 4000) {
+    extraPayPerHr = 10;
+  } else {
+    extraPayPerHr = 20;
+  }
+
+  double total = Ainur.salary + (Ainur.overtimeHr * extraPayPerHr);
+  print('Total Salary = \$$total USD');
 }
